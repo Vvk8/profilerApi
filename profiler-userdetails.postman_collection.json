@@ -172,7 +172,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:4000/api/userdetails/personalinfo/vivek_1685468755595",
+					"raw": "http://localhost:4000/api/userdetails/addpersonalinfo/vivek_1685468755595",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -181,7 +181,7 @@
 					"path": [
 						"api",
 						"userdetails",
-						"personalinfo",
+						"addpersonalinfo",
 						"vivek_1685468755595"
 					]
 				}
