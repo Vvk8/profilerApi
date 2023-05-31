@@ -1,0 +1,372 @@
+{
+	"info": {
+		"_postman_id": "9f890478-441f-4db9-902c-1f25022d010b",
+		"name": "profiler-userdetails",
+		"description": "# Working with preset requests\n\nIn this workspace, you’ll find a [collection](https://learning.postman.com/docs/collections/collections-overview) with preset requests for a basic CRUD operation. Each request contains a base URL [variable](https://learning.postman.com/docs/sending-requests/variables) with your base URL filled in.\n\n**Follow these steps to customize your requests:**\n\n**Step 1:** Build each request by updating its path.\n\nAdd the request’s path after the `base_url` variable.\n\nYou can also add query parameters, body, and other required details.\n\n<img src=\"https://skills-assets.pstmn.io/growth-experiments/GRW-358/URL.gif\" alt=\"\">\n\n**Step 2:** Send the request and save it. Don’t forget to update the request names.\n\n**Step 3:** Feel free to delete the requests that you don’t need.\n\n\n# Working with preset environments\n\nIn this workspace, you’ll find preset [environments](https://learning.postman.com/docs/sending-requests/managing-environments) for local, staging, and production. Each environment contains variables for your base URL and authorization (auth) token.\n\n**Follow these steps to customize your environments:**\n\n**Step 1:** Update the variables in each environment and save them. Feel free to add or remove variables.\n\n**Step 2:** Activate the environment to begin testing in it.\n\n<img src=\"https://skills-assets.pstmn.io/growth-experiments/GRW-358/Environments.gif\" alt=\"\">",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27573182"
+	},
+	"item": [
+		{
+			"name": "http://localhost:4000(getall)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/userdetails/viewall",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"userdetails",
+						"viewall"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000(getbyid)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/userdetails/vivek_1685468755595",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"userdetails",
+						"vivek_1685468755595"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000(getPersonalInfobyid)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/userdetails/viewpersonalinfo/vivek_1685468755595",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"userdetails",
+						"viewpersonalinfo",
+						"vivek_1685468755595"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000(getEXPbyid)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/userdetails/viewexperience/anand_1685474296854",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"userdetails",
+						"viewexperience",
+						"anand_1685474296854"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000(getQUALbyid)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/userdetails/viewexperience/anand_1685474296854",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"userdetails",
+						"viewexperience",
+						"anand_1685474296854"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000(add)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Elon\",\r\n    \"lastName\": \"Musk\",\r\n    \"email\": \"Elon@tesla.com\",\r\n    \"phoneNumber\": 7654321098,\r\n    \"qualifications\": [\r\n        {\r\n            \"sslc\": [\r\n                {\r\n                    \"sslc\": \"PQR\",\r\n                    \"sslcyear\": \"2011\",\r\n                    \"sslcPercentage\": \"82%\"\r\n                }\r\n            ],\r\n            \"hsc\": [\r\n                {\r\n                    \"hsc\": \"PQR\",\r\n                    \"hscYear\": \"2013\",\r\n                    \"hscPercentage\": \"90%\"\r\n                }\r\n            ],\r\n            \"ug\": [\r\n                {\r\n                    \"ug\": \"LMN\",\r\n                    \"ugYear\": \"2017\",\r\n                    \"ugPercentage\": \"75%\"\r\n                }\r\n            ],\r\n            \"pg\": [\r\n                {\r\n                    \"pg\": \"LMN\",\r\n                    \"pgYear\": \"2019\",\r\n                    \"pgPercentage\": \"70%\"\r\n                }\r\n            ]\r\n        }\r\n    ],\r\n    \"experience\": [\r\n        {\r\n            \"companyName\": \"PQR Solutions\",\r\n            \"from\": \"2020\",\r\n            \"to\": \"2021\"\r\n        }\r\n    ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/userdetails/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"userdetails",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000(addPersonalInfobyid)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Vivekaanandhan\",\r\n    \"lastName\": \"P S\",\r\n    \"email\": \"Vivek@kgisl.com\",\r\n    \"phoneNumber\": 9632587410\r\n    \r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/userdetails/personalinfo/vivek_1685468755595",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"userdetails",
+						"personalinfo",
+						"vivek_1685468755595"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000(addQUALbyid)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"qualifications\": [\r\n        {\r\n            \"sslc\": [\r\n                {\r\n                    \"sslc\": \"PQQQR\",\r\n                    \"sslcyear\": \"2011\",\r\n                    \"sslcPercentage\": \"82%\"\r\n                }\r\n            ],\r\n            \"hsc\": [\r\n                {\r\n                    \"hsc\": \"QWER\",\r\n                    \"hscYear\": \"2013\",\r\n                    \"hscPercentage\": \"90%\"\r\n                }\r\n            ],\r\n            \"ug\": [\r\n                {\r\n                    \"ug\": \"LMN\",\r\n                    \"ugYear\": \"2017\",\r\n                    \"ugPercentage\": \"75%\"\r\n                }\r\n            ],\r\n            \"pg\": [\r\n                {\r\n                    \"pg\": \"ABC\",\r\n                    \"pgYear\": \"2019\",\r\n                    \"pgPercentage\": \"70%\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/userdetails/addqualifications/vivek_1685468755595",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"userdetails",
+						"addqualifications",
+						"vivek_1685468755595"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000(addEXPbyid)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Elon\",\r\n    \"lastName\": \"Musk\",\r\n    \"email\": \"Elon@tesla.com\",\r\n    \"phoneNumber\": 7654321098,\r\n    \"qualifications\": [\r\n        {\r\n            \"sslc\": [\r\n                {\r\n                    \"sslc\": \"PQR\",\r\n                    \"sslcyear\": \"2011\",\r\n                    \"sslcPercentage\": \"82%\"\r\n                }\r\n            ],\r\n            \"hsc\": [\r\n                {\r\n                    \"hsc\": \"PQR\",\r\n                    \"hscYear\": \"2013\",\r\n                    \"hscPercentage\": \"90%\"\r\n                }\r\n            ],\r\n            \"ug\": [\r\n                {\r\n                    \"ug\": \"LMN\",\r\n                    \"ugYear\": \"2017\",\r\n                    \"ugPercentage\": \"75%\"\r\n                }\r\n            ],\r\n            \"pg\": [\r\n                {\r\n                    \"pg\": \"LMN\",\r\n                    \"pgYear\": \"2019\",\r\n                    \"pgPercentage\": \"70%\"\r\n                }\r\n            ]\r\n        }\r\n    ],\r\n    \"experience\": [\r\n        {\r\n            \"companyName\": \"PQR Solutions\",\r\n            \"from\": \"2020\",\r\n            \"to\": \"2021\"\r\n        }\r\n    ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/userdetails/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"userdetails",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000(updatebyid)",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"$set\": {\r\n    \"lastName\": \"Kishore\"\r\n  }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/userdetails/vivek_1685468755595",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"userdetails",
+						"vivek_1685468755595"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000(del)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/userdetails/removeall",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"userdetails",
+						"removeall"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000(delQUALbyid)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/userdetails/qualifications/remove/vivek_1685468755595",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"userdetails",
+						"qualifications",
+						"remove",
+						"vivek_1685468755595"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000(delEXPbyid)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/userdetails/qualifications/remove/vivek_1685468755595",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"userdetails",
+						"qualifications",
+						"remove",
+						"vivek_1685468755595"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000(delPersonalInfobyid)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/userdetails/delpersonalinfo/vivek_1685468755595",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"userdetails",
+						"delpersonalinfo",
+						"vivek_1685468755595"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
